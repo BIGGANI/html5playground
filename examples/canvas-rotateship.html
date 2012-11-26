@@ -1,0 +1,65 @@
+<html>
+<head>
+<script type="text/javascript">
+   var context;
+   var gamew=1000;
+   var gameh=500;  
+   var shipSize=50
+   var spin=1;  
+   var shipx=0;  
+   var shipy=0;  
+   
+   setInterval(fallingship,25);                // waits 25 milliseconds then repeats all of the above
+
+   function fallingship(){
+   context=game_area.getContext('2d');      // context is the variable to envoke all Canvas commands
+   context.strokeStyle="red"                // Color of the object lines
+   context.clearRect(0,0,gamew,gameh);      // Clears the entire screen
+   context.save();                          // Save the canvas location
+   context.translate(shipx,shipy);      // Move the Canvas Coordinates to the ship X & Y position (remember this moves each time)
+   context.rotate(spin * Math.PI/180); 
+   // Rotates the canvas according to the value of "spin" which is increaseing each frame      
+   drawship();
+   context.restore();                        // Restores our canvas (to its X&Y position - that way the game space rectangle is drawn at the same spot next time
+   context.strokeRect(0,0,gamew,gameh);     // Draws a game space rectangle 1000x500  
+   spin++;                                  // Increases the rotation of our object 1 radian
+   shipx++;                               // Increases the X position of our object - to the right
+   shipy++;                              // Increases the Y position of our object - down
+      if (shipx>gameh){
+	   shipx=0;  
+	   shipy=0; 
+	  }
+  }
+  
+   function drawship(){
+    context.strokeStyle="red";
+        context.beginPath();
+        context.moveTo(shipSize*-.3, shipSize*.2);
+        context.lineTo(shipSize*-.4, shipSize*-.1);
+        context.lineTo(shipSize*.1, shipSize*.4);
+        context.lineTo(0, shipSize*.5);
+        context.lineTo(shipSize*-.1, shipSize*.4);
+        context.lineTo(shipSize*.4, shipSize*-.1);
+        context.lineTo(shipSize*.3, shipSize*.2);
+
+        context.moveTo(shipSize*-.4, shipSize*-.1);
+        context.lineTo(shipSize*.3, shipSize*-.5);
+        context.lineTo(0, shipSize*.3);
+        context.lineTo(shipSize*-.3, shipSize*-.5);
+        context.lineTo(shipSize*.4, shipSize*-.1);
+  
+        context.stroke();
+   }
+
+</script>
+</head>
+<body>
+     <canvas id="game_area" width="1000" height="500"></canvas> <!--Add your Canvas app to your page-->
+     <!--live code
+      if (shipx>500){
+	   shipx=50;  
+	   shipy=50; 
+	  }
+      
+</body>
+</html>

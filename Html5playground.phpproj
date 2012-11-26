@@ -1,0 +1,82 @@
+"General"
+{
+"ProjectType" = "local"
+"AutoLoadTemplate" = "%s.php;class.%s.php;"
+"IncludeDirs" = ""
+}
+"Configurations"
+{
+    "Local|PHP 5.3"
+    {
+    }
+    "Staging|PHP 5.3"
+    {
+    }
+    "Production|PHP 5.3"
+    {
+    }
+}
+"Files"
+{
+    "admin.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "config.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\admin.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "db.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "errors.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "functions.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\local.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\service.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "service"
+    {
+    "ProjRelPath" = "T"
+    }
+    "service\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+}
+"ProjStartupServices"
+{
+}
+"Globals"
+{
+}
+"References"
+{
+}

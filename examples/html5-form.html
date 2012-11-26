@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .red { color: rgb(255, 0, 0); }
+      .small { font-size: 0.75em; }
+      p	{
+        margin-top:0px;
+        margin-bottom:0.25em;
+      }
+      fieldset{
+        margin-top:1em;
+        margin-bottom:1em;
+      }
+      body { background-color:#CFCFCF;}
+      form {
+        padding:1em;
+        margin:1em;
+        text-align:right;
+        border-radius:1em;
+        background-color: #FFFFFF;
+        color: #000000;
+      }		
+</style>
+    <script>
+      function processFormData()
+      {	// example form data handling is javascript
+        var myForm = document.getElementById ('html5form');
+        var theName = myForm.elements["name"].value;
+        alert(theName);
+        var theEmail = document.getElementById ('email').value;
+        alert(theEmail);
+        var rangeValue = myForm.elements["theRange"].value;
+        alert(rangeValue);
+        return false;
+      }
+      
+      function showRange(newVal)
+      {	// display the range value when it is changed
+        document.getElementById("outRange").innerHTML=newVal;
+      }
+    </script>
+  </head>
+  <body>
+    <form name="input" id="html5form" style="display: block; float: left; margin-right: 70px" onsubmit="return processFormData()">
+    <p>
+      <label for="name">Name <span class="red small">(required)</span></label>
+      <input id="name" name="name" type="text" required="true">
+    </p>
+    <p>
+      <label for="title">Title</label>
+      <select id="title" name="title">
+	<option value="Ms">Ms</option>
+	<option value="Mr">Mr</option>
+	<option value="Dr">Dr</option>
+	<option value="Prof">Prof</option>
+      </select>
+    </p>
+
+    <fieldset>
+      <legend>Selections</legend>
+      <p>
+	<input name="sex" type="radio" value="male"   /> Male
+	<input name="sex" type="radio" value="female" /> Female
+	<input name="vehicle" type="checkbox" value="Cat" /> I have a cat
+	<input name="vehicle" type="checkbox" value="Dog" /> I have a dog
+      </p>	
+    </fieldset>
+    <p>
+      <label for="age">Age</label>
+      <input id="age" name="age" type="number" min="18" max="25">
+    </p>
+    <p>
+      <label for="email">Email <span class="red small">(required)</span></label>
+      <input id="email" name="email" type="email" required="true" placeholder="Your email">
+    </p>
+    <p>
+      <label for="url">Webpage</label>
+      <input id="url" name="url" type="url">
+    </p>
+    <p>
+      <label for="dob">Date of Birth</label>
+      <input id="dob" name="dob" type="date">
+    </p>
+    <p>
+      <label for="theRange">Range</label>
+      1<input id="theRange" name="theRange" type="range" min="1" max="9" value="0" onchange="showRange(this.value)"> = 
+      <span id="outRange">1</span>
+    </p>
+    <p>
+      <input type="submit" name="submit" value="Submit">
+    </p>
+  </form>
+</body>
+</html>

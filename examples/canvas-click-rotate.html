@@ -1,0 +1,711 @@
+
+<html>
+
+<head>
+
+<script type="text/javascript">
+
+   var context;
+
+   var gamew=800;
+
+   var gameh=500;  
+
+   var shipSize=50
+
+   var spin=1;  
+
+   var shipx=gamew*.5;  
+
+   var shipy=gameh*.5;  
+
+   var spinr;
+
+   var spinl;
+
+   var rotatespeed=0;
+
+   var shotX=0;
+
+   var shotY=0;
+
+   var shot;
+
+   var shotAngle;
+
+   var shotstart=0;
+
+   var spinRadian;
+
+   var shotAngleround;
+
+   var spinRound;
+
+   var speedmax=20;
+
+   var spindefault=0;
+
+   var spinspeed=spindefault
+
+   var direction;
+
+   var angleDif;
+
+   var colorshift=1
+
+   var lasercolor;
+
+   var shotprogress=false;
+
+   var laserstatus=0;
+
+      var h=0;
+
+       var laserstart=0;
+
+  var ang1=Math.atan2(-2-0, 0-0);
+
+  var ang2=Math.atan2(-2-0, -2-0);
+
+  var ang3=Math.atan2(0-0, -2-0);
+
+  var ang4=Math.atan2(2-0, -2-0);
+
+  var ang5=Math.atan2(2-0, 0-0);
+
+  var ang6=Math.atan2(2-0, 2-0);  
+var xrate=0;
+var yrate=0;    
+
+var xforce=0;
+var yforce=0;
+var right;
+
+var xforcespeed=0;
+var yforcespeed=0;
+var left;
+var down;
+var up;    
+
+ document.addEventListener('keydown', keyDown, false);
+
+ document.addEventListener('keyup', keyUp, false);
+
+ document.addEventListener("mousedown", mouseDown, false);
+
+ document.addEventListener("mouseup", mouseUp, false);
+
+   
+setInterval(game,25);                // waits 25 milliseconds then repeats all of the above
+
+function game(){
+
+context=game_area.getContext('2d');      // context is the variable to envoke all Canvas commands
+context.fillStyle="black";
+
+
+if(right==true){
+xforcespeed++;
+}
+
+if(left==true){
+xforcespeed--;
+}
+
+
+if(down==true){
+yforcespeed++;
+}
+
+if(up==true){
+yforcespeed--;
+}
+
+
+xforcespeed=xforcespeed*.95;
+shipx=shipx+xforcespeed;
+yforcespeed=yforcespeed*.95;
+shipy=shipy+yforcespeed;
+
+
+
+if(shipy>=gameh){
+shipy=gameh;
+  }
+
+   
+   context.strokeStyle="black"                // Color of the object lines
+
+   if(laserstatus>0 && laserstart>0){
+
+      lasercolor="red";
+
+    h++;
+
+  }
+
+   
+
+   context.clearRect(0,0,gamew,gameh);      // Clears the entire screen
+
+   
+context.save();
+context.translate(shotX, shotY);
+context.moveTo(0, -10)
+context.lineTo(0,10)
+context.moveTo(-10, 0)
+context.lineTo(10,0)
+context.stroke();
+context.rotate(-45 * Math.PI/180); 
+context.strokeRect(-5, -5, 10, 10);
+context.restore();
+
+//context.strokeRect(shotX-5, shotY-5, 10, 10);
+   drawship();
+   
+
+   drawship();
+
+   
+
+   context.strokeRect(0,0,gamew,gameh);     // Draws a game space rectangle 1000x500;  
+context.save();
+context.fillStyle="rgba(0,100,150,0.5)";
+
+//   context.fillRect(0,200,gamew,(gameh-200));     // Draws a game space rectangle 1000x500;  
+context.restore();
+
+
+    if (shot){  // when clicking mouse this we calculate the angle to the point clicked
+
+  context.fillText("shot", 5, 170);
+
+  laserstatus=1;
+
+//  drawShot();
+
+  shotAngle=Math.atan2(shotY-shipy, shotX-shipx);  // Calculate radian angle of target fire
+
+  if(shotAngle<=0){                                                // The above calulate a negative radian. Turn the negative radian into is positive counterpart
+
+    shotAngle=2*Math.PI+shotAngle;
+
+    }
+
+  
+
+  angleDif=shotAngle-spinRadian                           
+
+  if (angleDif < -Math.PI || angleDif > Math.PI){   // if the existing angle of the ship compared to the angle it needs to more than half way around reverse the direction
+
+      if(shotAngle<spinRadian){
+
+    direction="right";
+
+    }
+
+    if(shotAngle>spinRadian){
+
+      direction="left";
+
+      }
+
+   }
+
+   else{                                                        // else if the difference in angle is positive spin toward the right
+
+  if(shotAngle>spinRadian){ 
+
+    direction="right";
+
+    }
+
+  
+
+    if(shotAngle<spinRadian){                    /// if the difference in angls is negative spin toward the left
+
+      direction="left";
+
+      }
+
+   }
+
+  shotstart=1;                                           // shotstart = 1 means we are about to take a shot at the target
+
+     }
+
+  
+
+  context.font = "12pt Courier";
+       context.fillText("Ship Cood"+" "+shipx +" " + shipy, 50, 30);
+
+    context.fillText("Shot Cood"+" "+shotX +" " + shotY, 50, 50);
+
+  context.fillText(shotAngleround, 50, 70);
+
+  context.fillText(spinRound, 50, 90);
+
+  context.fillText("Spin Dir"+" "+direction, 50, 120);
+
+  context.fillText("Radian Delta"+" "+angleDif, 50, 150);
+
+  }
+
+  
+
+//function angleShip(){
+
+//shotAngle=math.atan2(shotY - shipy, shotX - shipx);
+
+//context.fillText(shotAngle, 50, 70);
+
+ // }
+
+
+
+
+  
+
+function drawShot(){
+
+  laserstart=1;
+
+  if(laserstatus>0 && h>0){
+
+    
+
+    drawlaser();
+
+  }
+
+  
+
+   if (h>20){
+
+     h=0;
+
+     laserstatus=0;
+
+     laserstart=1;
+
+     
+
+  }
+
+}
+
+function spincalc(){
+
+if (shotstart==1){
+
+  if (direction=="left"){
+
+    
+
+  spinspeed--;
+
+    if (spinspeed<(speedmax*-1)){
+
+    spinspeed=(speedmax*-1);
+
+  }
+
+  }
+
+  else{
+
+    spinspeed++;
+
+
+
+  if (spinspeed>speedmax){
+
+    spinspeed=speedmax;
+
+  }
+
+  }
+
+  
+
+    
+
+    if (spin>=360){
+
+      spin=spin-360;
+
+    }
+
+    if (spin<=0){
+
+      spin=spin+360;
+
+    }
+
+  spin+=spinspeed;
+
+    spinspeed*=1.6;
+
+
+
+//  spinspeed=spinspeed*1.1;
+
+  shotAngleround=Math.round(shotAngle*10)/10;
+
+  spinRound=Math.round(spinRadian*10)/10;
+
+
+
+//  spin+=rotatespeed;
+
+//  rotatespeed*=.9;
+
+  spin=Math.round(spin*100)/100
+
+   
+
+   }
+
+}
+
+  function drawship(){
+
+    spincalc()  
+
+    context.save();                          // Save the canvas location  
+
+    context.strokeStyle="black"
+
+    rotateship();
+
+    makeship();
+
+    context.restore();                        // Restores our canvas (to its X&Y position - that way the game space rectangle is drawn at the same spot next time
+
+ if (spinRadian==shotAngle){
+
+      drawShot()
+
+      shotprogress=true;
+
+     }
+
+  }
+
+  
+
+  function rotateship(){
+
+     if (spinRound >=shotAngleround-0.5 && spinRound <= shotAngleround +0.5 || spinRound >Math.PI*2  || spinRound <0) {
+
+//  context.fillText("Shot", 50, 120);
+
+  spinRadian=shotAngle;
+
+  spinspeed = spindefault;
+
+  //shot=false;
+
+  shotstart=0;
+
+    }
+
+    else
+
+  {
+
+   spinRadian=(spin * Math.PI/180)
+
+  }
+
+   context.translate(shipx,shipy);      // Move the Canvas Coordinates to the ship X & Y position (remember this moves each time)
+
+   context.rotate(spinRadian); 
+
+   context.fillText("Ship Radian"+" "+spinRadian, 50, 20);
+
+   context.fillText("Shot Radian"+" "+shotAngle, 50, 40);
+
+   context.fillText("Laser"+laserstatus, 50, 90);
+
+  
+
+  
+
+
+
+ 
+
+
+
+//   context.rotate(shotAngle); 
+
+   // Rotates the canvas according to the value of "spin" which is increaseing each frame      
+
+
+
+
+
+  }
+
+  
+
+ function drawlaser(){
+
+    context.save();
+
+    context.strokeStyle=lasercolor;
+
+    context.save();
+
+    context.translate(shipx, shipy);
+
+    context.rotate(spinRadian-(-90 * Math.PI/180))
+
+    context.moveTo(shipSize*-.3, shipSize*-.3);
+
+    context.restore();
+
+    context.lineTo(shotX,shotY);
+
+
+
+    context.save();
+
+    context.translate(shipx, shipy);  
+
+    context.rotate(spinRadian-(-90 * Math.PI/180));
+
+    context.moveTo (shipSize*.3, shipSize*-.3);
+
+    context.restore();
+
+    context.lineTo(shotX,shotY);
+
+  context.stroke();
+
+    context.restore();
+
+  
+
+  }
+
+  
+
+   function makeship(){
+
+       context.rotate(-90 * Math.PI/180); 
+
+      context.strokeStyle="black";
+
+//      context.shadowOffsetX = 0;
+
+ //       context.shadowOffsetY = 0;
+
+ //       context.shadowBlur = 28;
+
+ //       context.shadowColor = "999999";
+
+     
+
+        context.beginPath();
+
+        context.moveTo(shipSize*-.3, shipSize*.2);
+
+        context.lineTo(shipSize*-.4, shipSize*-.1);
+
+        context.lineTo(shipSize*.1, shipSize*.4);
+
+        context.lineTo(0, shipSize*.5);
+
+        context.lineTo(shipSize*-.1, shipSize*.4);
+
+        context.lineTo(shipSize*.4, shipSize*-.1);
+
+        context.lineTo(shipSize*.3, shipSize*.2);
+
+  //  context.closePath();
+
+
+
+        context.moveTo(shipSize*-.4, shipSize*-.1);
+
+        context.lineTo(shipSize*.3, shipSize*-.5);
+
+        context.lineTo(0, shipSize*.3);
+
+        context.lineTo(shipSize*-.3, shipSize*-.5);
+
+        context.lineTo(shipSize*.4, shipSize*-.1);
+
+  //  context.closePath();
+
+  context.stroke();
+
+  
+
+  
+
+   }
+
+   
+
+   //This is the set of keys that do some action like spin the spin, move the ship etc
+
+  function keyDown(e) {
+
+    if (e.keyCode == 68){
+
+      spinr = true;
+
+      rotatestate=on;
+
+    } 
+
+    if (e.keyCode == 65){ 
+
+      spinl = true;
+
+      rotatestate=on;
+
+    }
+    if (e.keyCode == 39){ 
+
+      right = true;
+
+         }
+ if (e.keyCode == 37){ 
+
+      left= true;
+
+         }
+ if (e.keyCode == 38){ 
+
+      up= true;
+
+         }
+ if (e.keyCode == 40){ 
+
+      down= true;
+
+         }
+
+  }
+
+  
+
+  function keyUp(e) {
+
+    if (e.keyCode == 39) right = false;
+
+    if (e.keyCode == 37) left = false;
+
+    if (e.keyCode == 38) up = false;
+
+    if (e.keyCode == 40) down = false;
+
+    if (e.keyCode == 65) spinl = false;
+
+    if (e.keyCode == 68) spinr = false;
+
+  }
+
+  
+
+function mouseUp(e) {
+
+    mouseIsDown = 0;
+
+    shot=false;
+
+   mouseXY();
+
+}
+
+
+
+function mouseDown(e) {
+
+   mouseIsDown = 1;
+
+   shot=true;
+
+   mouseXY();
+
+}
+
+
+
+function mouseXY(e) {
+
+  if (!e) e = event;
+
+  if (shot){
+
+    shotX = e.pageX - can.offsetLeft;
+
+    shotY = e.pageYcan.offsetTop;
+
+   // len = 1;
+
+  }
+
+}
+
+
+
+function mouseXY(e) {
+
+  if (!e) e = event;
+
+  if (shot){
+
+    shotX = e.pageX - game_area.offsetLeft;
+
+    shotY = e.pageY- game_area.offsetTop;
+
+
+
+} 
+
+}
+
+
+
+</script>
+
+</head>
+
+<body><div width=250 style="float:left; width:250;">
+
+<p>
+<p>
+Moving, rotating, then firing a weapon in a game can be a complex set of tasks and motions, and depending on the device inputs you may not have a lot of options for inputs.  This Canvas demo shows how you can simplify those actions into a single click or tap using by calculating the angle between your ship and your target, then rotating the ship to that angle then drawing the laser fire at the same angles.
+</p>
+<br>
+<b>Instructions:</b>
+<br>Click on the screen to rotate your ship and fire<br>
+<br>
+
+Ship will spin in the direction that makes the shortest trip to the clicked coordinate<br><br>
+Lasers will fire from coordinate of the ship, its angle toward the coordinate clicked
+</p>
+</div><div align="left">
+
+     <canvas id="game_area" width=800 height=500 align="center" ></canvas></div><!--Add your Canvas app to your page-->
+
+     <!--live code
+
+      if (shipx>500){
+
+     shipx=50;  
+
+     shipy=50; 
+
+    }
+
+      
+
+</body>
+
+</html>??

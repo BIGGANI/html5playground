@@ -1,0 +1,598 @@
+"General"
+{
+"ProjectType" = "local"
+"AutoLoadTemplate" = "%s.php;class.%s.php;"
+"IncludeDirs" = ""
+}
+"Configurations"
+{
+    "Local|PHP 5.3"
+    {
+    }
+    "Staging|PHP 5.3"
+    {
+    }
+    "Production|PHP 5.3"
+    {
+    }
+}
+"Files"
+{
+    "apple-touch-icon-114x114-precomposed.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "apple-touch-icon-57x57-precomposed.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "apple-touch-icon-72x72-precomposed.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "apple-touch-icon-precomposed.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "apple-touch-icon.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "config.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.mobile-1.0.1-min.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.mobile-1.0.1-min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.mobile-1.0.1-min.js~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.accordion.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.all.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.autocomplete.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.base.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.button.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.core.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.datepicker.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.dialog.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.progressbar.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.resizable.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.selectable.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.slider.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.tabs.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery.ui.theme.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\jquery_ui_all.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\layout_default.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\style.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\style.css~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "db.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "errors.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\audio_tag.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\canvas_tag.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\css3-inset-text.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\css3-inset-text.html~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\css3-text-transforms.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\css3-text-transforms.html~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\helloworld.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\html5-form.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\html5-form.html~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\html5-localstorage.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\output_tag.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\ruby_tag.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\simple-css-animations.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\simple-css-animations.html~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "examples\\wbr_tag.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "functions.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\appup_logo-small.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\appup_logo.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\icons.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\key01_01.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\key01_02.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\key01_03.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\key02_01.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\key02_02.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\key02_03.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\logo.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\main_bg-small.jpg"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\main_bg.jpg"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\phone_horiz.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\phone_horiz_current.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\phone_vert.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\phone_vert_current.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\tablet_horiz.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\tablet_horiz_current.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\tablet_vert.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\tablet_vert_current.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\taghead.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\ultrabook_horiz.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "img\\ultrabook_horiz_current.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "index.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "index.php.old"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\images"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\images\\ajax-loader.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\images\\icons-18-black.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\images\\icons-18-white.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\images\\icons-36-black.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\images\\icons-36-white.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\jquery.mobile-1.0.1.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\jquery.mobile-1.0.1.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\jquery.mobile-1.0.1.min.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\jquery.mobile-1.0.1.min.css~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\jquery.mobile-1.0.1.min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\jquery.mobile.structure-1.0.1.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\jquery.mobile\\jquery.mobile.structure-1.0.1.min.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\codemirror.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\css.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\htmlmixed.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\javascript.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\jquery-1.6.2.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\jquery-1.6.2.min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\jquery-min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\jquery-mobile-1.0.1.min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\jquery-ui-latest.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\jquery.cookie.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\jquery.hotkeys.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\jquery.jstree.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\jquery.layout-latest.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\modernizr-2.0.6.min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\overlay.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\runmode.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\apple"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\apple\\bg.jpg"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\apple\\d.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\apple\\dot_for_ie.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\apple\\style.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\apple\\throbber.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\classic"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\classic\\d.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\classic\\d.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\classic\\dot_for_ie.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\classic\\style.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\classic\\throbber.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default-rtl"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default-rtl\\d.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default-rtl\\d.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default-rtl\\dots.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default-rtl\\style.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default-rtl\\throbber.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default\\d.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default\\d.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default\\style.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\themes\\default\\throbber.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\underscore-min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\libs\\xml.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\mylibs"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\mylibs\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\mylibs\\searchbox.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\plugins.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\script.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\script.js~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\service.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "service"
+    {
+    "ProjRelPath" = "T"
+    }
+    "service\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+}
+"ProjStartupServices"
+{
+}
+"Globals"
+{
+}
+"References"
+{
+}

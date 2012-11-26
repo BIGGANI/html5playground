@@ -1,0 +1,26 @@
+<html>
+<title>Test Page for services</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="service.js"></script>
+<script language="javascript">
+$(function() {
+	$("#btngetexamples").click(function() {
+		var pg = new playground();
+		pg.getexamples();
+	});
+	$("#btngetcontent").click(function() {
+		var pg = new playground();
+		pg.getcontent("4f306badeabb4be41f000000");
+	});
+	$("#btnsave").click(function() {
+		var pg = new playground();
+		pg.setcontent("some html5 sample test", "some sample desc", "<html><head></head><body><h1>test</h1></body></html>", '["html5","video","media","sound","visual"]', '[{"cat":"html5","sub":"video"}]');
+	});
+});
+</script>
+<h1>Samples</h1>
+<input type="button" id="btnsave" value="save sample"/><br />
+<input type="button" id="btngetexamples" value="alert all examples" /> <br />
+<input type="button" id="btngetcontent" value="alert content for a given id" />
+
+</html>
